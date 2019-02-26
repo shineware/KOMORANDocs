@@ -10,7 +10,7 @@
 
 .. Note::
    문서의 내용 중 지원되지 않거나 잘못된 내용을 발견하실 경우,
-   `KOMORAN 문서 프로젝트에 이슈 <https://github.com/9bow/KOMORANDocs/issues>`_ 를 남겨주세요.
+   `KOMORAN 문서 프로젝트에 이슈 <https://github.com/komoran/KOMORANDocs/issues>`_ 를 남겨주세요.
 
 ----
 
@@ -72,7 +72,7 @@ Maven 이용하기
     </dependency>
   </dependencies>
 
-이렇게 구성된 `pom.xml 파일 <https://github.com/9bow/tutorials/blob/master/bootstrap-maven/pom.xml>`_ 을
+이렇게 구성된 `pom.xml 파일 <https://github.com/komoran/tutorials/blob/master/bootstrap-maven/pom.xml>`_ 을
 확인해보실 수 있습니다.
 
 Gradle 이용하기
@@ -94,7 +94,7 @@ Gradle 이용하기
     implementation 'com.github.shin285:KOMORAN:3.3.4'
   }
 
-이렇게 구성된 `build.gralde 파일 <https://github.com/9bow/tutorials/blob/master/bootstrap-gradle/build.gradle>`_ 을
+이렇게 구성된 `build.gralde 파일 <https://github.com/komoran/tutorials/blob/master/bootstrap-gradle/build.gradle>`_ 을
 확인해보실 수 있습니다.
 
 sbt 이용하기
