@@ -73,12 +73,12 @@ KOMORAN을 개발한 shineware에서 제공하는 참고자료입니다.
 
 .. toctree::
    :maxdepth: 2
-   :caption: 목차
+   :caption: 시작하기
    :name: toc
 
-   /sources/installation
-   /sources/tutorial
-   /sources/postypes
+   /firststep/installation
+   /firststep/tutorial
+   /firststep/postypes
 
 
 .. Indices and tables
