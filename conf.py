@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'KOMORANDocs'
+project = 'KOMORAN'
 copyright = '2019, shineware'
 author = 'shineware'
 
@@ -27,6 +27,8 @@ author = 'shineware'
 version = ''
 # The full version, including alpha/beta/rc tags
 release = ''
+
+site_url = 'https://docs.komoran.kr'
 
 
 # -- General configuration ---------------------------------------------------
@@ -41,6 +43,7 @@ release = ''
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
+    'sphinx_sitemap',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -114,6 +117,10 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+
+# base url for this document site
+# set for sphinx_sitemap plugin
+html_baseurl = site_url
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
