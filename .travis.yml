@@ -1,0 +1,12 @@
+language: python
+python:
+  - 3.5
+install:
+  - pip install -r requirements.txt
+script:
+  - make html
+after_success:
+  - ./push.sh
+env:
+  global:
+    - secure: "LMA9F97HkFMcS9EHU//9kBBw063bu1+S9q1DqTnsCr2AypoJb8uKmXwFB7/e8RunKM/TA3EZYxx4SDfno0YX241yYKKBNXr1mINpulMhpxcAlGbjDpl058fWVoRox1kN1jpVxDRMXfqxZP1vwnKf/eZQ4jWx/2NNhdUZFz5efxc9Y6BSJcYEzLpdS130PPf3UhS4N2dqHrbK8E70J7YX3m3x+d2dgwzTqb4srnGZbYwXrgJxDDoivMse0uHemcNxVkKEJ26dqJQnCJgl99OqRJRkTs4Sh5ftKnRckCdeJ8yuugBeh66p9bBH0dSKjYdPH+KR0+dUrHLF0JF1AaEbjMIZExhWcNkbpoyTC8jXTgzYOl6V0+0n/5hLVqf8KstLTDVOiV8iqWz5TcWNvsbDYLdy/4TfJouhM19byJjuAZWS0cEj8nnwbNwSjorixTE5LGLWaRqE9W9NKZkoXtlLnmAXZmaFwW+3SgCHupRcM4Gggh4691iPTKBxCTEhfjGga4bb3R0n0cbPF/KSBk7301RzAd4IVZg70QOLO3+c9D/A8FweoghMhGObRlfR2MjsdYB8a/tEt9w2OTvNTOjjdfdzpp9+RyP36IXW00f0RFg98EUlZF99k4/+tcCxcFLRSF3dd9DFIPVk8xPT2PF/0kJg2YzEOJq2TJ9Ucw0Gx+g="
