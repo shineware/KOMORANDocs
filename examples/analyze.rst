@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-모델 학습 예제
+분석 예제
 =======================================
 
 이 문서에서는 KOMORAN 모델 학습 예제를 살펴보겠습니다.

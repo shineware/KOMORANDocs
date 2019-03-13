@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-분석 예제
+모델 학습 예제
 =======================================
 
 이 문서에서는 KOMORAN을 이용한 형태소 분석 예제를 살펴보겠습니다.
