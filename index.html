@@ -77,18 +77,23 @@
               
             
             
-              <p class="caption"><span class="caption-text">시작하기</span></p>
+              <p class="caption"><span class="caption-text">KOMORAN 시작하기</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="firststep/installation.html">설치하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="firststep/tutorial.html">3분 만에 형태소 분석 따라하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="firststep/tutorial-java.html">Gradle/Maven 없이 형태소 분석 따라하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="firststep/postypes.html">품사표 (PoS Table)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">사용 예시</span></p>
+<p class="caption"><span class="caption-text">KOMORAN 사용 예시</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/analyze.html">분석 예제</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/train-model.html">모델 학습 예제</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/spark2-scala.html">Spark2 분석 예제 (Scala)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PyKOMORAN</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pykomoran/installation.html">PyKomoran 설치하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pykomoran/tutorial.html">3줄의 코드로 형태소 분석 시작하기</a></li>
 </ul>
 
             
@@ -155,7 +160,8 @@
             
   <div class="section" id="komoran">
 <h1>KOMORAN 문서<a class="headerlink" href="#komoran" title="제목 주소">¶</a></h1>
-<p>KOMORAN <a class="footnote-reference" href="#f1" id="id1">[1]</a> 은 Java로 개발된 한국어 형태소 분석기입니다.</p>
+<p>KOMORAN <a class="footnote-reference" href="#f1" id="id1">[1]</a> 은 Java로 개발된 한국어 형태소 분석기입니다.
+그 외, Python에서 실행 가능한 PyKOMORAN 또는 R에서 실행 가능한 RKOMORAN(준비 중)도 함께 개발 중에 있습니다.</p>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
 <p class="last">KOMORAN은 <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a> 로 배포되고 있습니다.
@@ -175,18 +181,42 @@
 </ul>
 </div>
 <div class="section" id="id5">
-<h3>그 외 참고 자료<a class="headerlink" href="#id5" title="제목 주소">¶</a></h3>
+<h3>다른 언어에서의 KOMORAN<a class="headerlink" href="#id5" title="제목 주소">¶</a></h3>
+<p>Python과 R에서 KOMORAN을 사용할 수 있습니다.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Python에서 사용 가능한 PyKOMORAN</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://github.com/shineware/PyKOMORAN">PyKOMORAN 저장소</a> 에 전체 소스 코드가 공개되어 있습니다.</li>
+<li><a class="reference external" href="https://pypi.org/project/PyKomoran/">PyPI 저장소</a> 에서 바로 설치 가능한 패키지를 확인하실 수 있습니다.</li>
+<li><a class="reference internal" href="pykomoran/installation.html"><span class="doc">PyKomoran 설치하기</span></a> 에서 설치 방법을 확인해보세요.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>R에서 사용 가능한 RKOMORAN (<em>개발 중</em>)</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://github.com/shineware/RKOMORAN">RKOMORAN 저장소</a> 에 <strong>현재 개발 중인</strong> 소스 코드가 공개되어 있습니다.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>그 외 참고 자료<a class="headerlink" href="#id6" title="제목 주소">¶</a></h3>
 <p>사용자 분들께서 만들어주신 참고자료입니다.</p>
 <ul class="simple">
 <li>간단히 실행해볼 수 있는 <a class="reference external" href="https://github.com/9bow/KOMORANRestAPIServer">Simple API Server</a> 를 사용해보실 수 있습니다.</li>
-<li>Python 버전의 <a class="reference external" href="https://github.com/lovit/komoran3py">KOMORAN3Py</a> 도 공개되어 있습니다.</li>
+<li><a class="reference external" href="https://github.com/lovit/komoran3py">Hyunjoong Kim</a> 님께서 개발하신 Python 버전의 <a class="reference external" href="https://github.com/lovit/komoran3py">KOMORAN3Py</a> 도 공개되어 있습니다.</li>
 </ul>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>개요<a class="headerlink" href="#id6" title="제목 주소">¶</a></h2>
 <div class="section" id="id7">
-<h3>특징<a class="headerlink" href="#id7" title="제목 주소">¶</a></h3>
+<h2>개요<a class="headerlink" href="#id7" title="제목 주소">¶</a></h2>
+<div class="section" id="id8">
+<h3>특징<a class="headerlink" href="#id8" title="제목 주소">¶</a></h3>
 <ul class="simple">
 <li><dl class="first docutils">
 <dt>Pure Java</dt>
@@ -220,8 +250,8 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h3>분석 예시<a class="headerlink" href="#id8" title="제목 주소">¶</a></h3>
+<div class="section" id="id9">
+<h3>분석 예시<a class="headerlink" href="#id9" title="제목 주소">¶</a></h3>
 <ul class="simple">
 <li>아래는 <a class="reference external" href="https://www.shineware.co.kr/products/komoran/">KOMORAN 데모</a> 를 이용한 분석 예시입니다.</li>
 <li>입력 문장: <cite>대한민국은 민주공화국이다.</cite></li>
@@ -232,7 +262,7 @@
 </ul>
 <a class="reference internal image-reference" href="_images/KOMORAN_Sample_02.png"><img alt="KOMORAN 분석 예시 #2" class="align-center" src="_images/KOMORAN_Sample_02.png" style="width: 640px;" /></a>
 <div class="toctree-wrapper compound" id="firststep">
-<p class="caption"><span class="caption-text">시작하기</span><a class="headerlink" href="#firststep" title="Permalink to this toctree">¶</a></p>
+<p class="caption"><span class="caption-text">KOMORAN 시작하기</span><a class="headerlink" href="#firststep" title="Permalink to this toctree">¶</a></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="firststep/installation.html">설치하기</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="firststep/installation.html#id2">환경 준비</a></li>
@@ -260,7 +290,7 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="examples">
-<p class="caption"><span class="caption-text">사용 예시</span><a class="headerlink" href="#examples" title="Permalink to this toctree">¶</a></p>
+<p class="caption"><span class="caption-text">KOMORAN 사용 예시</span><a class="headerlink" href="#examples" title="Permalink to this toctree">¶</a></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/analyze.html">분석 예제</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples/analyze.html#id2">들어가기</a></li>
@@ -277,6 +307,26 @@
 <li class="toctree-l2"><a class="reference internal" href="examples/spark2-scala.html#id1">들어가기</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/spark2-scala.html#id2">문장 분석</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/spark2-scala.html#id3">분석 결과</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="id11">
+<p class="caption"><span class="caption-text">PyKOMORAN</span><a class="headerlink" href="#id11" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pykomoran/installation.html">PyKomoran 설치하기</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/installation.html#id1">환경 준비</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/installation.html#id4">설치하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/installation.html#id5">소스코드 다운로드</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pykomoran/tutorial.html">3줄의 코드로 형태소 분석 시작하기</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/tutorial.html#id2">전체 코드 보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/tutorial.html#pykomoran">PyKomoran 불러오기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/tutorial.html#id3">Komoran 객체 생성하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/tutorial.html#id4">형태소 분석하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/tutorial.html#id5">다양한 방법으로 형태소 분석하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pykomoran/tutorial.html#id6">결론</a></li>
 </ul>
 </li>
 </ul>
