@@ -94,7 +94,7 @@ Gradle 이용하기
     implementation 'com.github.shin285:KOMORAN:3.3.4'
   }
 
-이렇게 구성된 `build.gradle 파일 <https://github.com/shin285/KOMORAN/blob/master/build.gradle>`_ 을
+이렇게 구성된 `build.gralde 파일 <https://github.com/komoran/tutorials/blob/master/bootstrap-gradle/build.gradle>`_ 을
 확인해보실 수 있습니다.
 
 sbt 이용하기
