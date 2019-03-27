@@ -132,5 +132,7 @@ PyKOMORAN은 KOMORAN에서 제공하는 다양한 형태의 형태소 분석 결
 ---------------------------------------
 지금까지 Python에서 PyKomoran을 이용하여 형태소 분석을 하는 간단한 예제를 살펴보았습니다.
 
-.. todo::
-  `tutorials 저장소 <https://github.com/shineware/tutorials>`_ 에 .py 및 .ipynb 형태의 예제를 추가합니다.
+위 예제 코드는 `PyKOMORAN tutorials 저장소 <https://github.com/shineware/tutorials/blob/master/PyKOMORAN>`_ 에서 확인하시거나, 아래에서 링크에서 다운로드 받으실 수 있습니다.
+
+* `3줄의 코드로 형태소 분석 시작하기 예제 코드 다운로드 (.py) <https://github.com/shineware/tutorials/blob/master/PyKOMORAN/bootstrap/bootstrap.py>`_
+* `3줄의 코드로 형태소 분석 시작하기 예제 코드 다운로드 (.ipynb) <https://github.com/shineware/tutorials/blob/master/PyKOMORAN/bootstrap/bootstrap.ipynb>`_
