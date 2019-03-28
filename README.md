@@ -41,11 +41,12 @@ Sphinx는 reST(reStructuredText)를 사용하고 있습니다.
 
 수정한 문서를 확인하기 위해서는 다음과 같이 정적 사이트를 빌드해야 합니다.
 
-*nix
+유닉스 사용자는 아래 명령어를 사용하시면 편리합니다.
 ```sh
   make html
 ```
-windows
+
+윈도우 사용자는 아래 명령어를 사용하여 빌드할 수 
 ```sh
   sphinx-build . _build
 ```
