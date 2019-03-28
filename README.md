@@ -21,7 +21,7 @@ https://docs.komoran.kr
 
 ```sh
   git clone https://github.com/shineware/KOMORANDocs
-  cd docs
+  cd KOMORANDocs
 ```
 
 ### 의존성 설치
