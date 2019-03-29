@@ -46,7 +46,7 @@ Sphinx는 reST(reStructuredText)를 사용하고 있습니다.
   make html
 ```
 
-윈도우 사용자는 아래 명령어를 사용하여 빌드할 수 
+윈도우 사용자는 아래 명령어를 사용하여 빌드할 수 있습니다.
 ```sh
   sphinx-build . _build
 ```
