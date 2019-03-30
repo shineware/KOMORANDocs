@@ -247,7 +247,7 @@ OpenJDK 사용 중 이슈가 발생한다면 <a class="reference external" href=
 </div>
 <div class="section" id="gradle">
 <h3>Gradle 이용하기<a class="headerlink" href="#gradle" title="Permalink to this headline">¶</a></h3>
-<p>먼저, <code class="docutils literal notranslate"><span class="pre">build.gralde</span></code> 파일 내에 다음과 같이 저장소(repository)를 추가합니다. 이미 <code class="docutils literal notranslate"><span class="pre">repositories</span></code> 항목이 존재한다면
+<p>먼저, <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> 파일 내에 다음과 같이 저장소(repository)를 추가합니다. 이미 <code class="docutils literal notranslate"><span class="pre">repositories</span></code> 항목이 존재한다면
 <code class="docutils literal notranslate"><span class="pre">maven</span> <span class="pre">...</span></code> 부분만 추가합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">allprojects</span> <span class="p">{</span>
   <span class="n">repositories</span> <span class="p">{</span>
@@ -257,7 +257,7 @@ OpenJDK 사용 중 이슈가 발생한다면 <a class="reference external" href=
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>이후, 다음과 같이 의존성(dependency)을 추가합니다. <code class="docutils literal notranslate"><span class="pre">build.gralde</span></code> 파일 내에 이미 <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> 항목이 존재한다면
+<p>이후, 다음과 같이 의존성(dependency)을 추가합니다. <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> 파일 내에 이미 <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> 항목이 존재한다면
 <code class="docutils literal notranslate"><span class="pre">implementation</span> <span class="pre">...</span></code> 부분만 추가합니다. 다음은 <code class="docutils literal notranslate"><span class="pre">3.3.4</span></code> 버전을 추가하는 예시입니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="p">{</span>
   <span class="n">implementation</span> <span class="s1">&#39;com.github.shin285:KOMORAN:3.3.4&#39;</span>

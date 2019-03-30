@@ -77,7 +77,7 @@ Maven 이용하기
 
 Gradle 이용하기
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-먼저, ``build.gralde`` 파일 내에 다음과 같이 저장소(repository)를 추가합니다. 이미 ``repositories`` 항목이 존재한다면
+먼저, ``build.gradle`` 파일 내에 다음과 같이 저장소(repository)를 추가합니다. 이미 ``repositories`` 항목이 존재한다면
 ``maven ...`` 부분만 추가합니다. ::
 
   allprojects {
@@ -87,7 +87,7 @@ Gradle 이용하기
     }
   }
 
-이후, 다음과 같이 의존성(dependency)을 추가합니다. ``build.gralde`` 파일 내에 이미 ``dependencies`` 항목이 존재한다면
+이후, 다음과 같이 의존성(dependency)을 추가합니다. ``build.gradle`` 파일 내에 이미 ``dependencies`` 항목이 존재한다면
 ``implementation ...`` 부분만 추가합니다. 다음은 ``3.3.4`` 버전을 추가하는 예시입니다. ::
 
   dependencies {
