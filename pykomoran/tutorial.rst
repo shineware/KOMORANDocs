@@ -11,7 +11,7 @@
 
 .. Note::
    문서의 내용 중 지원되지 않거나 잘못된 내용을 발견하실 경우,
-   `KOMORAN 문서 프로젝트에 이슈 <https://github.com/komoran/docs/issues>`_ 를 남겨주세요.
+   `KOMORAN 문서 프로젝트에 이슈 <https://github.com/shineware/KOMORANDocs/issues>`_ 를 남겨주세요.
 
 ----
 
