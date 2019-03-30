@@ -118,5 +118,5 @@ Gradle/Maven 없이 형태소 분석 따라하기
 결론
 ---------------------------------------
 지금까지 Gradle이나 Maven과 같은 프로젝트 관리도구 없이 의존성을 추가하고, KOMORAN을 이용하여 형태소 분석을 하는 간단한
-예제를 살펴보았습니다. GitHub 저장소에서 `Java 버전 <https://github.com/komoran/tutorials/tree/master/bootstrap-java>`_
+예제를 살펴보았습니다. GitHub 저장소에서 `Java 버전 <https://github.com/shineware/tutorials/blob/master/KOMORAN/bootstrap-java>`_
 의 전체 코드를 확인하실 수 있습니다.
