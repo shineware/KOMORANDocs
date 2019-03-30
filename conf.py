@@ -28,7 +28,7 @@ version = ''
 # The full version, including alpha/beta/rc tags
 release = ''
 
-site_url = 'https://docs.komoran.kr'
+site_url = 'https://docs.komoran.kr/'
 
 
 # -- General configuration ---------------------------------------------------
