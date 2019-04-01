@@ -110,6 +110,15 @@ Python과 R에서 KOMORAN을 사용할 수 있습니다.
    /pykomoran/installation
    /pykomoran/tutorial
 
+
+.. toctree::
+   :maxdepth: 1
+   :caption: API
+   :name: api
+
+   /manual/javaapi
+   /manual/pythonapi
+
 .. Indices and tables
 .. ==================
 
