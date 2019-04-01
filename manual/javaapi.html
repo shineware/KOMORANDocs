@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Java API &mdash; KOMORAN  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="Python API" href="pythonapi.html" />
+    <link rel="prev" title="3줄의 코드로 형태소 분석 시작하기" href="../pykomoran/tutorial.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> KOMORAN
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">KOMORAN 시작하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firststep/installation.html">설치하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firststep/tutorial.html">3분 만에 형태소 분석 따라하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firststep/tutorial-java.html">Gradle/Maven 없이 형태소 분석 따라하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firststep/postypes.html">품사표 (PoS Table)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">KOMORAN 사용 예시</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/analyze.html">분석 예제</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/train-model.html">모델 학습 예제</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/spark2-scala.html">Spark2 분석 예제 (Scala)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PyKOMORAN</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pykomoran/installation.html">PyKomoran 설치하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pykomoran/tutorial.html">3줄의 코드로 형태소 분석 시작하기</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Java API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#komoran">Komoran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#komoranresult">KomoranResult</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#corpusbuilder">CorpusBuilder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modelbuilder">ModelBuilder</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">KOMORAN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Java API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/manual/javaapi.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="java-api">
+<h1>Java API<a class="headerlink" href="#java-api" title="제목 주소">¶</a></h1>
+<p>본 문서에서는 Komoran에서 제공되는 다양한 API 들에 대해서 살펴봅니다.</p>
+<div class="section" id="komoran">
+<h2>Komoran<a class="headerlink" href="#komoran" title="제목 주소">¶</a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="nf">Komoran</span><span class="o">(</span><span class="n">String</span> <span class="n">modelPath</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Komoran 생성자 입니다. 모델 경로를 인자로 받으며 Komoran 생성 시 해당 모델을 로드합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="nf">Komoran</span><span class="o">(</span><span class="n">DEFAULT_MODEL</span> <span class="n">modelType</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Komoran 생성자 입니다. 기본으로 제공하는 모델을 선택하여 생성합니다. DEFAULT_MODEL.LIGHT와 DEFAULT_MODEL.FULL의 두 가지 버전을 기본적으로 제공합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setFWDic</span><span class="o">(</span><span class="n">String</span> <span class="n">filename</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>기분석 사전을 로드합니다. 기분석 사전의 경로를 인자로 받습니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setUserDic</span><span class="o">(</span><span class="n">String</span> <span class="n">userDic</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>사용자 사전을 로드합니다. 사용자 사전의 경로를 인자로 받습니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">KomoranResult</span> <span class="nf">analyze</span><span class="o">(</span><span class="n">String</span> <span class="n">sentence</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>입력 문장에 대한 형태소 분석을 수행합니다. 입력 문장에 대한 형태소 분석 결과를 KomoranResult 객체로 반환합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">analyzeTextFile</span><span class="o">(</span><span class="n">String</span> <span class="n">inputFilename</span><span class="o">,</span> <span class="n">String</span> <span class="n">outputFilename</span><span class="o">,</span> <span class="kt">int</span> <span class="n">thread</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>파일 단위로 형태소 분석을 수행합니다. 형태소 분석이 필요한 파일의 경로, 형태소 분석 결과가 출력될 파일의 경로, 분석 시 사용할 쓰레드 수를 인자로 받습니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">KomoranResult</span><span class="o">&gt;</span> <span class="nf">analyze</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">sentences</span><span class="o">,</span> <span class="kt">int</span> <span class="n">thread</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>여러 문장에 대한 형태소 분석을 수행합니다. 분석할 문장의 List, 분석 시 사용할 쓰레드 수를 인자로 받습니다. 분석된 결과는 List&lt;KomoranResult&gt;로 반환됩니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">KomoranResult</span><span class="o">&gt;</span> <span class="nf">analyze</span><span class="o">(</span><span class="n">String</span> <span class="n">sentence</span><span class="o">,</span> <span class="kt">int</span> <span class="n">nbest</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>입력 문장에 대한 형태소 분석 결과 중 n-best를 제공합니다. 분석할 문장, n-best를 인자로 받습니다. n-best 만큼의 형태소 분석 결과를 List&lt;KomoranResult&gt;로 반환합니다.</p>
+</div>
+<div class="section" id="komoranresult">
+<h2>KomoranResult<a class="headerlink" href="#komoranresult" title="제목 주소">¶</a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">LatticeNode</span><span class="o">&gt;</span> <span class="nf">getResultNodeList</span><span class="o">()</span>
+</pre></div>
+</div>
+<p>형태소분석 결과를 List&lt;LatticeNode&gt; 형태로 반환합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getNouns</span><span class="o">()</span>
+</pre></div>
+</div>
+<p>형태소 분석 결과 중 명사류를 List&lt;String&gt; 형태로 반환합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getMorphesByTags</span><span class="o">(</span><span class="n">String</span><span class="o">...</span> <span class="n">str</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>형태소 분석 결과 중 특정 품사에 해당하는 형태소만 반환합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getMorphesByTags</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">targetPosCollection</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>형태소 분석 결과 중 특정 품사에 해당하는 형태소만 반환합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">getPlainText</span><span class="o">()</span>
+</pre></div>
+</div>
+<p>형태소 분석 결과를 plain text형태의 string으로 반환합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Token</span><span class="o">&gt;</span> <span class="nf">getTokenList</span><span class="o">()</span>
+</pre></div>
+</div>
+<p>형태소 분석 결과를 List&lt;Token&gt; 형태로 반환합니다. Token에는 형태소, 품사, 시작 위치, 끝나는 위치 등의 정보를 포함하고 있습니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="nf">getList</span><span class="o">()</span>
+</pre></div>
+</div>
+<p>형태소 분석 결과를 형태소, 품사 Pair의 리스트 형태로 반환합니다.</p>
+</div>
+<div class="section" id="corpusbuilder">
+<h2>CorpusBuilder<a class="headerlink" href="#corpusbuilder" title="제목 주소">¶</a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">String</span> <span class="n">savePathName</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>빌드한 코퍼스를 savePathName 경로에 저장합니다. savePathName 밑에 <code class="docutils literal notranslate"><span class="pre">dic.irregular</span></code>, <code class="docutils literal notranslate"><span class="pre">dic.word</span></code>, <code class="docutils literal notranslate"><span class="pre">grammar.in</span></code> 파일이 저장됩니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">load</span><span class="o">(</span><span class="n">String</span> <span class="n">loadPath</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>빌드된 코퍼스를 load 합니다. loadPath 디렉토리 아래에는 save를 통해 생성된 <code class="docutils literal notranslate"><span class="pre">dic.irregular</span></code>, <code class="docutils literal notranslate"><span class="pre">dic.word</span></code>, <code class="docutils literal notranslate"><span class="pre">grammar.in</span></code> 파일이 있어야합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">buildPath</span><span class="o">(</span><span class="n">String</span> <span class="n">corporaPath</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>corporaPath 밑에 있는 모든 파일을 빌드합니다. 서브디렉토리에 있는 모든 파일들을 대상으로 합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">buildPath</span><span class="o">(</span><span class="n">String</span> <span class="n">corporaPath</span><span class="o">,</span> <span class="n">String</span> <span class="n">suffix</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>corporaPath 밑에 있는 모든 파일 중 파일 확장자가 suffix로 끝나는 파일들만 빌드합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">build</span><span class="o">(</span><span class="n">String</span> <span class="n">filename</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>filename에 해당하는 파일을 빌드합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">appendUserDic</span><span class="o">(</span><span class="n">String</span> <span class="n">filename</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>filename에 해당하는 사용자 사전을 추가하여 코퍼스 빌드 시 함께 빌드됩니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">appendUserDicPath</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">,</span> <span class="n">String</span> <span class="n">suffix</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>path 밑에 있는 모든 파일 중 확장자가 suffix로 끝나는 파일들만 사용자 사전으로 추가하여 코퍼스 빌드 시 함께 빌드됩니다.</p>
+</div>
+<div class="section" id="modelbuilder">
+<h2>ModelBuilder<a class="headerlink" href="#modelbuilder" title="제목 주소">¶</a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setExternalDic</span><span class="o">(</span><span class="n">String</span> <span class="n">externalDic</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">본</span> <span class="pre">메소드는</span> <span class="pre">반드시</span> <span class="pre">buildPath</span> <span class="pre">메소드</span> <span class="pre">호출</span> <span class="pre">전에만</span> <span class="pre">사용가능합니다.</span></code>
+externalDic 경로에 있는 외부 사전을 추가하여 모델을 빌드합니다. 외부 사전에 등록된 단어들의 빈도수는 50으로 초기화되어 모델에 반영됩니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">buildPath</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>입력된 path 디렉토리 내 저장된 파일로부터 model을 빌드합니다. path 내에는 <code class="docutils literal notranslate"><span class="pre">dic.word</span></code>, <code class="docutils literal notranslate"><span class="pre">dic.irregular</span></code>, <code class="docutils literal notranslate"><span class="pre">grammar.in</span></code> 파일이 포함되어 있어야 합니다.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">본</span> <span class="pre">메소드</span> <span class="pre">호출</span> <span class="pre">전에</span> <span class="pre">반드시</span> <span class="pre">buildPath</span> <span class="pre">메소드를</span> <span class="pre">실행해야</span> <span class="pre">합니다</span></code>
+빌드된 모델을 path 디렉토리에 저장합니다. path 디렉토리에는 <code class="docutils literal notranslate"><span class="pre">irregular.model</span></code>, <code class="docutils literal notranslate"><span class="pre">observation.model</span></code>, <code class="docutils literal notranslate"><span class="pre">pos.table</span></code>, <code class="docutils literal notranslate"><span class="pre">transition.model</span></code> 파일이 생성됩니다.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pythonapi.html" class="btn btn-neutral float-right" title="Python API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../pykomoran/tutorial.html" class="btn btn-neutral" title="3줄의 코드로 형태소 분석 시작하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, shineware
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-99586710-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
