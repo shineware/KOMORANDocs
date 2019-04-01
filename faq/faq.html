@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python API &mdash; KOMORAN  documentation</title>
+  <title>자주 묻는 질문 &mdash; KOMORAN  documentation</title>
   
 
   
@@ -28,8 +28,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
-    <link rel="next" title="사용자 사전 사용" href="manual.html" />
-    <link rel="prev" title="Java API" href="javaapi.html" /> 
+    <link rel="prev" title="사용자 사전 사용" href="../manual/manual.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -97,18 +96,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../pykomoran/tutorial.html">3줄의 코드로 형태소 분석 시작하기</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manual/javaapi.html">Java API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/pythonapi.html">Python API</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Manual</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="manual.html">사용자 사전 사용</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manual.html#id2">기분석 사전 사용</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/manual.html">사용자 사전 사용</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/manual.html#id2">기분석 사전 사용</a></li>
 </ul>
 <p class="caption"><span class="caption-text">FAQ</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../faq/faq.html">자주 묻는 질문</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">자주 묻는 질문</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#light-full">기본으로 제공되는 LIGHT 모델과 FULL 모델의 차이가 뭔가요?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setfwddic-setuserdic">setFWDDic과 setUserDic은 무엇인가요?</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -154,13 +157,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Python API</li>
+      <li>자주 묻는 질문</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/manual/pythonapi.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/faq/faq.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -173,9 +176,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="python-api">
-<h1>Python API<a class="headerlink" href="#python-api" title="제목 주소">¶</a></h1>
-<p>본 문서에서는 Komoran에서 제공되는 다양한 Python API 들에 대해서 살펴봅니다.</p>
+  <div class="section" id="id1">
+<h1>자주 묻는 질문<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<p>본 페이지에서는 KOMORAN과 관련하여 자주 문의가 들어오는 내용들을 정리하였습니다.</p>
+<div class="section" id="light-full">
+<h2>기본으로 제공되는 LIGHT 모델과 FULL 모델의 차이가 뭔가요?<a class="headerlink" href="#light-full" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li>LIGHT 모델은 일반적으로 사용되는 문장들을 학습한 모델로 다양한 분야에서 사용하실 수 있는 기본 모델입니다.</li>
+<li>FULL 모델은 LIGHT 모델에 위키피디아의 타이틀을 NNP(고유명사)로 포함해서 학습한 것입니다. 그러므로 LIGHT 모델보다 상대적으로 용량이 큽니다.</li>
+<li>형태소 분석기의 결과가 그대로 서비스에 노출되는 어플리케이션(연관 검색어, 색인어 추출, 단어 추출, 자동 완성 등)이 아니라면 <code class="docutils literal notranslate"><span class="pre">LIGHT</span> <span class="pre">모델을</span> <span class="pre">권장</span></code>합니다.</li>
+</ul>
+</div>
+<div class="section" id="setfwddic-setuserdic">
+<h2>setFWDDic과 setUserDic은 무엇인가요?<a class="headerlink" href="#setfwddic-setuserdic" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">setFWDDic</span></code>은 기분석 사전을 형태소 분석기에 로드하는 메소드입니다. 기분석 사전은 일종의 <code class="docutils literal notranslate"><span class="pre">cache</span></code>입니다. 입력된 문장 내에서 기분석 사전에 포함된 어절이 있다면 형태소 분석 단계를 거치지 않고 기분석 사전의 결과대로 분석됩니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">setUserDic</span></code>은 사용자 사전을 형태소 분석기에 로드하는 메소드입니다. 사용자 사전에 포함된 단어들은 형태소 분석 단계에서 가장 높은 우선 순위를 갖습니다. 사이드 이펙트가 발생할 수 있으니 주의하여 사용해야 합니다.</li>
+</ul>
+</div>
 </div>
 
 
@@ -186,10 +204,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="manual.html" class="btn btn-neutral float-right" title="사용자 사전 사용" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="javaapi.html" class="btn btn-neutral" title="Java API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../manual/manual.html" class="btn btn-neutral" title="사용자 사전 사용" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
