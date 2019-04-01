@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -26,8 +26,8 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="색인" href="../genindex.html" />
-    <link rel="search" title="검색" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python API" href="pythonapi.html" />
     <link rel="prev" title="3줄의 코드로 형태소 분석 시작하기" href="../pykomoran/tutorial.html" /> 
 
@@ -180,10 +180,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="java-api">
-<h1>Java API<a class="headerlink" href="#java-api" title="제목 주소">¶</a></h1>
+<h1>Java API<a class="headerlink" href="#java-api" title="Permalink to this headline">¶</a></h1>
 <p>본 문서에서는 Komoran에서 제공되는 다양한 API 들에 대해서 살펴봅니다.</p>
 <div class="section" id="komoran">
-<h2>Komoran<a class="headerlink" href="#komoran" title="제목 주소">¶</a></h2>
+<h2>Komoran<a class="headerlink" href="#komoran" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="nf">Komoran</span><span class="o">(</span><span class="n">String</span> <span class="n">modelPath</span><span class="o">)</span>
 </pre></div>
 </div>
@@ -218,7 +218,7 @@
 <p>입력 문장에 대한 형태소 분석 결과 중 n-best를 제공합니다. 분석할 문장, n-best를 인자로 받습니다. n-best 만큼의 형태소 분석 결과를 List&lt;KomoranResult&gt;로 반환합니다.</p>
 </div>
 <div class="section" id="komoranresult">
-<h2>KomoranResult<a class="headerlink" href="#komoranresult" title="제목 주소">¶</a></h2>
+<h2>KomoranResult<a class="headerlink" href="#komoranresult" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">LatticeNode</span><span class="o">&gt;</span> <span class="nf">getResultNodeList</span><span class="o">()</span>
 </pre></div>
 </div>
@@ -249,7 +249,7 @@
 <p>형태소 분석 결과를 형태소, 품사 Pair의 리스트 형태로 반환합니다.</p>
 </div>
 <div class="section" id="corpusbuilder">
-<h2>CorpusBuilder<a class="headerlink" href="#corpusbuilder" title="제목 주소">¶</a></h2>
+<h2>CorpusBuilder<a class="headerlink" href="#corpusbuilder" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">String</span> <span class="n">savePathName</span><span class="o">)</span>
 </pre></div>
 </div>
@@ -280,7 +280,7 @@
 <p>path 밑에 있는 모든 파일 중 확장자가 suffix로 끝나는 파일들만 사용자 사전으로 추가하여 코퍼스 빌드 시 함께 빌드됩니다.</p>
 </div>
 <div class="section" id="modelbuilder">
-<h2>ModelBuilder<a class="headerlink" href="#modelbuilder" title="제목 주소">¶</a></h2>
+<h2>ModelBuilder<a class="headerlink" href="#modelbuilder" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setExternalDic</span><span class="o">(</span><span class="n">String</span> <span class="n">externalDic</span><span class="o">)</span>
 </pre></div>
 </div>
@@ -344,7 +344,6 @@ externalDic 경로에 있는 외부 사전을 추가하여 모델을 빌드합�
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
     
 
   
