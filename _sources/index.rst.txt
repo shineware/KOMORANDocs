@@ -134,6 +134,14 @@ Python과 R에서 KOMORAN을 사용할 수 있습니다.
 
    /faq/faq
 
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Java
+   :name: java
+
+   /java/javadocs/
+
 .. Indices and tables
 .. ==================
 
