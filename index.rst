@@ -140,7 +140,7 @@ Python과 R에서 KOMORAN을 사용할 수 있습니다.
    :caption: Java
    :name: java
 
-   /java/javadocs/
+   /java/javadocs/packages
 
 .. Indices and tables
 .. ==================
